@@ -9,7 +9,6 @@ import io.flutter.embedding.engine.dart.DartExecutor
 fun createFlutterEngine(context: Context): FlutterEngine =
     FlutterEngine(context).apply {
         flutterEngine = this
-        navigationChannel.setInitialRoute("/")
         dartExecutor.executeDartEntrypoint(DartExecutor.DartEntrypoint.createDefault())
         FlutterEngineCache.getInstance().put("cache_engine", this)
     }
